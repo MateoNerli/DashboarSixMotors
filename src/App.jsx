@@ -1,7 +1,10 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import { Navbar } from "./components/navBar";
 import { Sidebar } from "./components/sideBar";
 import { MainContainer } from "./components/mainContainer";
+import { UserComponent } from "./components/userComponent";
+import { StoreComponent } from "./components/storeComponents";
 
 function App() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -13,8 +16,14 @@ function App() {
   return (
     <>
       <Navbar onToggleSidebar={toggleSidebar} />
-      <Sidebar isOpen={isSidebarOpen} />
-      <MainContainer />
+      <BrowserRouter>
+        <Sidebar isOpen={isSidebarOpen} />
+        <Routes>
+          <Route path="/" element={<MainContainer />} />
+          <Route path="/users" element={<UserComponent />} />
+          <Route path="/store" element={<StoreComponent />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
