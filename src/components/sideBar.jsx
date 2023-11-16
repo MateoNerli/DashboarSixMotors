@@ -10,7 +10,7 @@ export const Sidebar = ({ isOpen }) => {
   return (
     <>
       <aside className={sidebarClasses}>
-        <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+        <div className="h-screen px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
           <ul className="space-y-2 font-medium">
             {sideBar.map((menu, index) => (
               <li key={index}>

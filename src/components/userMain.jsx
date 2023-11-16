@@ -12,7 +12,7 @@ export const UserMain = (props) => {
         </div>
       </div>
       <div>
-        <span className="bg-green-100 text-green-800 py-1 px-3 rounded-full font-medium">
+        <span className="bg-green-100 text-green-800 p-2 rounded-full font-medium">
           {props.address.city}
         </span>
       </div>

@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { InfoCard } from "./infoCard";
 import { InfoCategory } from "./infoCategory";
-import { InfoUser } from "./userInfo";
+import { UserOrders } from "./componentUserOrdes";
 
 export const MainContainer = () => {
   return (
@@ -34,7 +34,7 @@ export const MainContainer = () => {
             />
           </div>
           <InfoCategory />
-          <InfoUser />
+          <UserOrders />
         </div>
       </div>
     </>
