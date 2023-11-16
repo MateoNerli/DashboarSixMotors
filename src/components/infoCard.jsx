@@ -1,4 +1,4 @@
-const InfoCard = ({ title, amount, icon, color }) => {
+export const InfoCard = ({ title, amount, icon, color }) => {
   return (
     <div className={`flex items-center justify-center h-40 rounded  ${color}`}>
       <div className="text-center">
@@ -9,5 +9,3 @@ const InfoCard = ({ title, amount, icon, color }) => {
     </div>
   );
 };
-
-export default InfoCard;
