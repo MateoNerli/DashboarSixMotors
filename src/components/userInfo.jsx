@@ -1,121 +1,50 @@
+import { useFetch } from "../hooks/useFetch";
+import { OrderComponent } from "./ordersComponent";
+import { UserMain } from "./userMain";
+
 export const InfoUser = () => {
+  const { data, loading, error } = useFetch(
+    "https://jsonplaceholder.typicode.com/users?_limit=5"
+  );
   return (
     <>
-      <div className="w-full mt-6  p-4 border rounded-lg shadow sm:p-8 bg-gray-800 border-gray-700">
-        <div className="flex items-center justify-between mb-4">
-          <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
-            Usuarios
-          </h5>
-          <a
-            href="#"
-            className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
-          >
-            Ver mas
-          </a>
+      <section className="grid grid-cols-1 md:grid-cols-2 mt-10 gap-8">
+        <div>
+          <h1 className="text-2xl font-bold mb-8">Usuarios</h1>
+          <div className="bg-white p-8 rounded-xl shadow-2xl mb-8 flex flex-col gap-8">
+            <div className="grid grid-cols-1 xl:grid-cols-4 items-center gap-4 mb-4">
+              {error && (
+                <div className="flex justify-center items-center h-screen">
+                  <h1 className="text-4xl text-red-500">{error}</h1>
+                </div>
+              )}
+              {loading && (
+                <div className="flex justify-center items-center h-screen">
+                  <div className="flex items-center space-x-2">
+                    <div className="animate-pulse rounded-full bg-gray-500 h-12 w-12 rounded-full"></div>
+                    <div className="space-y-2">
+                      <div className="animate-pulse rounded-md bg-gray-500 h-4 w-[200px]"></div>
+                      <div className="animate-pulse rounded-md bg-gray-500 h-4 w-[170px]"></div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {data?.map((user) => (
+                <UserMain
+                  key={user.id}
+                  name={user.name}
+                  username={user.username}
+                  address={user.address}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-        <div className="flow-root">
-          <ul
-            role="list"
-            className="divide-y divide-gray-200 dark:divide-gray-700"
-          >
-            <li className="py-3 sm:py-4">
-              <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <img
-                    className="w-8 h-8 rounded-full"
-                    src="https://img.freepik.com/foto-gratis/chico-guapo-seguro-posando-contra-pared-blanca_176420-32936.jpg?w=740&t=st=1700142307~exp=1700142907~hmac=4f1429d4b3e4685df2f398a755ef0f9d7da02416c8d5a07ff5845eced57f3bfc"
-                    alt=" image"
-                  />
-                </div>
-                <div className="flex-1 min-w-0 ms-4">
-                  <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                    hola hola
-                  </p>
-                  <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                    hola@gmail.com
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li className="py-3 sm:py-4">
-              <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <img
-                    className="w-8 h-8 rounded-full"
-                    src="https://img.freepik.com/foto-gratis/chico-guapo-seguro-posando-contra-pared-blanca_176420-32936.jpg?w=740&t=st=1700142307~exp=1700142907~hmac=4f1429d4b3e4685df2f398a755ef0f9d7da02416c8d5a07ff5845eced57f3bfc"
-                    alt=" image"
-                  />
-                </div>
-                <div className="flex-1 min-w-0 ms-4">
-                  <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                    hola hola
-                  </p>
-                  <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                    hola@gmail.com
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li className="py-3 sm:py-4">
-              <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <img
-                    className="w-8 h-8 rounded-full"
-                    src="https://img.freepik.com/foto-gratis/chico-guapo-seguro-posando-contra-pared-blanca_176420-32936.jpg?w=740&t=st=1700142307~exp=1700142907~hmac=4f1429d4b3e4685df2f398a755ef0f9d7da02416c8d5a07ff5845eced57f3bfc"
-                    alt=" image"
-                  />
-                </div>
-                <div className="flex-1 min-w-0 ms-4">
-                  <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                    hola hola
-                  </p>
-                  <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                    hola@gmail.com
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li className="py-3 sm:py-4">
-              <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <img
-                    className="w-8 h-8 rounded-full"
-                    src="https://img.freepik.com/foto-gratis/chico-guapo-seguro-posando-contra-pared-blanca_176420-32936.jpg?w=740&t=st=1700142307~exp=1700142907~hmac=4f1429d4b3e4685df2f398a755ef0f9d7da02416c8d5a07ff5845eced57f3bfc"
-                    alt=" image"
-                  />
-                </div>
-                <div className="flex-1 min-w-0 ms-4">
-                  <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                    hola hola
-                  </p>
-                  <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                    hola@gmail.com
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li className="py-3 sm:py-4">
-              <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <img
-                    className="w-8 h-8 rounded-full"
-                    src="https://img.freepik.com/foto-gratis/chico-guapo-seguro-posando-contra-pared-blanca_176420-32936.jpg?w=740&t=st=1700142307~exp=1700142907~hmac=4f1429d4b3e4685df2f398a755ef0f9d7da02416c8d5a07ff5845eced57f3bfc"
-                    alt=" image"
-                  />
-                </div>
-                <div className="flex-1 min-w-0 ms-4">
-                  <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                    hola hola
-                  </p>
-                  <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                    hola@gmail.com
-                  </p>
-                </div>
-              </div>
-            </li>
-          </ul>
+        <div>
+          <h1 className="text-2xl font-bold mb-8">Historial de pedidos</h1>
+          <OrderComponent />
         </div>
-      </div>
+      </section>
     </>
   );
 };

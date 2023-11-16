@@ -28,7 +28,7 @@ export const UserComponent = () => {
         </div>
       )}
       <div className="p-4 border-2 border-gray-700 border-dashed rounded-lg  mt-14">
-        <div className="grid grid-cols-1 gap-4 mb-8 border  rounded-lg shadow-sm md:mb-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 bg-white bg-gray-800">
+        <div className="grid grid-cols-1 gap-4 mb-8   rounded-lg shadow-sm md:mb-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
           {data?.map((user) => (
             <User
               key={user.id}

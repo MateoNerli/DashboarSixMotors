@@ -3,7 +3,7 @@ import { useFetch } from "../hooks/useFetch";
 
 export const StoreComponent = () => {
   const { data, loading, error } = useFetch(
-    "https://fakestoreapi.com/products?limit=8"
+    "https://fakestoreapi.com/products"
   );
 
   return (
