@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Navbar } from "./components/navBar";
 import { Sidebar } from "./components/sideBar";
 import { MainContainer } from "./components/mainContainer";
-import { UserComponent } from "./components/userComponent";
-import { StoreComponent } from "./components/storeComponents";
+import { UserComponent } from "./components/user/userComponent";
+import { StoreComponent } from "./components/products/storeComponents";
 
 function App() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainContainer />} />
           <Route path="/users" element={<UserComponent />} />
-          <Route path="/store" element={<StoreComponent />} />
+          <Route path="/products" element={<StoreComponent />} />
         </Routes>
       </BrowserRouter>
     </>

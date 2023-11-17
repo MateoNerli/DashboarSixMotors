@@ -1,5 +1,5 @@
 import { User } from "./user";
-import { useFetch } from "../hooks/useFetch";
+import { useFetch } from "../../hooks/useFetch";
 
 export const UserComponent = () => {
   const { data, loading, error } = useFetch(

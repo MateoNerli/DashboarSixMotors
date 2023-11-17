@@ -1,12 +1,15 @@
 export const Products = (props) => {
   return (
     <>
-      <div className="">
-        <img className="rounded-t-lg" src={props.img} />
+      <div className="border-2 border-gray-700  rounded-lg">
+        <img
+          className="rounded-t-lg"
+          src={`http://localhost:3000/uploads/${props.img}`}
+        />
 
         <div className="p-5">
           <a href="#">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-black">
+            <h5 className="mb-2 text-2xl font-bold  text-black">
               {props.name}
             </h5>
           </a>

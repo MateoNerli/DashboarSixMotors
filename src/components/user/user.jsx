@@ -1,6 +1,6 @@
 export const User = (props) => {
   return (
-    <div className="max-w-sm border rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className=" border rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <div className="w-full max-w-sm px-4 pt-4">
         <div className="flex flex-col items-center pb-10">
           <img

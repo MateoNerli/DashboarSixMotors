@@ -7,11 +7,15 @@ export function useFetch(url) {
 
   useEffect(() => {
     setLoading(true);
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => setError(error))
-      .finally(() => setLoading(false));
+    setTimeout(() => {
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => setData(data))
+        .catch((error) => setError(error))
+        .finally(() => setLoading(false));
+    }, 1000);
   }, []);
+
+  // console.log(data);
   return { data, loading, error };
 }
