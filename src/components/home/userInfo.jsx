@@ -1,4 +1,5 @@
 import { useFetch } from "../../hooks/useFetch";
+import { CatdTotal } from "./catdTotal";
 import { UserMain } from "./userMain";
 
 export const InfoUser = () => {
@@ -8,14 +9,14 @@ export const InfoUser = () => {
   return (
     <>
       <div>
-        <div className="bg-[#bfe0e2] p-8 rounded-xl shadow-2xl mb-8 flex flex-col gap-8">
+        <div className="bg-[#bfe0e2] p-4 rounded-xl shadow-2xl  flex flex-col gap-4">
           {error && (
             <div className="flex justify-center items-center h-screen">
               <h1 className="text-4xl text-red-500">{error}</h1>
             </div>
           )}
           {loading && (
-            <div className="flex justify-center items-center h-screen">
+            <div className="flex justify-center items-center">
               <div className="flex flex-row gap-2">
                 <div className="w-4 h-4 rounded-full bg-blue-700 animate-bounce [animation-delay:.7s]"></div>
                 <div className="w-4 h-4 rounded-full bg-blue-700 animate-bounce [animation-delay:.3s]"></div>
@@ -37,6 +38,7 @@ export const InfoUser = () => {
             : null}
         </div>
       </div>
+      <CatdTotal />
     </>
   );
 };
