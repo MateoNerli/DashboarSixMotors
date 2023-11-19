@@ -24,7 +24,7 @@ export const LastProduct = () => {
         </div>
       )}
       {latestProduct && (
-        <div className="flex items-center">
+        <div className="flex items-center p-4">
           <div className="mr-4">
             <img
               src={`http://localhost:3000/uploads/${latestProduct.img}`}
@@ -33,11 +33,12 @@ export const LastProduct = () => {
             />
           </div>
           <div className="flex flex-col">
-            <div className="capitalize text-lg font-semibold">
+            <div className="capitalize text-lg font-bold">
               {latestProduct.name}
             </div>
+            <div className="text-gray-800">{latestProduct.category}</div>
+            <div className="text-gray-700">{latestProduct.price}</div>
             <div className="text-gray-500">{latestProduct.description}</div>
-            <div className="text-gray-500">{latestProduct.price}</div>
           </div>
         </div>
       )}

@@ -39,6 +39,7 @@ export const LastUser = () => {
             </div>
             <div className="text-gray-500">{latestUser.email}</div>
             <div className="text-gray-500">{latestUser.user}</div>
+            <div className="text-gray-500">{latestUser.reviews}</div>
           </div>
         </div>
       )}
