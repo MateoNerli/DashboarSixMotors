@@ -9,7 +9,7 @@ export const StoreComponent = () => {
 
   return (
     <>
-      <div className="p-4 sm:ml-64">
+      <div className="p-4 sm:ml-64  flex justify-center items-center">
         {error && (
           <div className="flex justify-center items-center h-screen">
             <h1 className="text-4xl text-red-500">{error}</h1>

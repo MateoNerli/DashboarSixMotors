@@ -16,11 +16,11 @@ function App() {
 
   return (
     <>
-      <Navbar onToggleSidebar={toggleSidebar} />
+      <Navbar onToggleSidebar={toggleSidebar} isOpen={isSidebarOpen} />
       <BrowserRouter>
-        <Sidebar isOpen={isSidebarOpen} />
+        <Sidebar isOpen={isSidebarOpen} onToggleSidebar={toggleSidebar} />
         <Routes>
-          <Route path="/" element={<MainContainer />} />
+          <Route path="/" exact element={<MainContainer />} />
           <Route path="/users" element={<UserComponent />} />
           <Route path="/products" element={<StoreComponent />} />
           <Route path="/orders" element={<OrderComponent />} />

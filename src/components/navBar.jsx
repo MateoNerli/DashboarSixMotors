@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
-export const Navbar = ({ onToggleSidebar }) => {
+export const Navbar = ({ onToggleSidebar, isOpen }) => {
   return (
     <>
       <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
@@ -12,9 +12,16 @@ export const Navbar = ({ onToggleSidebar }) => {
                 onClick={onToggleSidebar}
                 className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               >
-                <FontAwesomeIcon icon={faBars} className="w-6 h-6" />
+                <FontAwesomeIcon
+                  icon={isOpen ? faXmark : faBars}
+                  className="w-6 h-6"
+                />
               </button>
-              <a href="https://localhost/3000" className="flex ms-2 md:me-24">
+              <a
+                href="https://localhost/3000"
+                className="flex ms-2 md:me-24"
+                onClick={onToggleSidebar}
+              >
                 <img
                   src="../src/assets/diseño.png"
                   className="h-10 me-3"

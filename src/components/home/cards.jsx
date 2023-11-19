@@ -17,7 +17,7 @@ export const Cards = () => {
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-4 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
         <InfoCard
           loading={loading}
           title={data1?.meta?.title}
