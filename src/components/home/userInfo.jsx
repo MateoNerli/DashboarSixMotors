@@ -9,7 +9,7 @@ export const InfoUser = () => {
   return (
     <>
       <div>
-        <div className="bg-[#bfe0e2] p-4 rounded-xl shadow-2xl  flex flex-col gap-4">
+        <div className="bg-[#d3dad6] p-4 rounded-xl shadow-2xl  flex flex-col gap-4">
           {error && (
             <div className="flex justify-center items-center h-screen">
               <h1 className="text-4xl text-red-500">{error}</h1>
