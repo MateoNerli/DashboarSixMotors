@@ -5,6 +5,7 @@ import { Sidebar } from "./components/sideBar";
 import { MainContainer } from "./components/mainContainer";
 import { UserComponent } from "./components/user/userComponent";
 import { StoreComponent } from "./components/products/storeComponents";
+import { OrderComponent } from "./components/orders/orderComponent";
 
 function App() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<MainContainer />} />
           <Route path="/users" element={<UserComponent />} />
           <Route path="/products" element={<StoreComponent />} />
+          <Route path="/orders" element={<OrderComponent />} />
         </Routes>
       </BrowserRouter>
     </>

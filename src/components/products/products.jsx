@@ -1,22 +1,23 @@
 export const Products = (props) => {
   return (
     <>
-      <div className="border-2 border-gray-700  rounded-lg">
-        <img
-          className="rounded-t-lg"
-          src={`http://localhost:3000/uploads/${props.img}`}
-        />
-
-        <div className="p-5">
-          <a href="#">
-            <h5 className="mb-2 text-2xl font-bold  text-black">
-              {props.name}
-            </h5>
-          </a>
-          <p className="mb-3 font-normal text-gray-400">{props.description}</p>
-          <p className="mb-3 font-normal text-gray-400">{props.category}</p>
-          <div className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            {props.price}
+      <div className="w-60 h-80 bg-gray-800 p-3 flex flex-col gap-1 rounded-br-3xl">
+        <div className="duration-500 contrast-50 h-48 bg-gradient-to-bl from-black  hover:contrast-100">
+          <img
+            className="w-full h-full object-cover"
+            src={`http://localhost:3000/uploads/${props.img}`}
+            alt=""
+          />
+        </div>
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-row justify-between">
+            <div className="flex flex-col">
+              <span className="text-xl text-gray-50 font-bold">
+                {props.name}
+              </span>
+              <p className="text-xs text-gray-400">{props.category}</p>
+            </div>
+            <span className="font-bold  text-red-600">${props.price}</span>
           </div>
         </div>
       </div>

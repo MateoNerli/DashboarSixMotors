@@ -1,10 +1,8 @@
-import { User } from "./user";
 import { useFetch } from "../../hooks/useFetch";
+import { User } from "./user";
 
 export const UserComponent = () => {
-  const { data, loading, error } = useFetch(
-    "https://jsonplaceholder.typicode.com/users"
-  );
+  const { data, loading, error } = useFetch("http://localhost:3000/api/users");
 
   return (
     <div className="p-4 sm:ml-64">
@@ -27,18 +25,20 @@ export const UserComponent = () => {
           </div>
         </div>
       )}
-      <div className="p-4 border-2 border-gray-700 border-dashed rounded-lg  mt-14">
-        <div className="grid grid-cols-1 gap-4 mb-8   rounded-lg shadow-sm md:mb-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
-          {data?.map((user) => (
-            <User
-              key={user.id}
-              name={user.name}
-              username={user.username}
-              email={user.email}
-              img={user.img || "https://i.pravatar.cc/300"}
-              address={user.address}
-            />
-          ))}
+      <div className="p-4 mt-14">
+        <div className="grid grid-cols-1 gap-4 mb-8 rounded-lg shadow-sm md:mb-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+          {data
+            ? data.data.map((user) => (
+                <User
+                  key={user.id}
+                  name={user.name}
+                  username={user.username}
+                  email={user.email}
+                  country={user.country}
+                  img={user.img}
+                />
+              ))
+            : null}
         </div>
       </div>
     </div>
