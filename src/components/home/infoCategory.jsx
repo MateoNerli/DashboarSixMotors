@@ -3,6 +3,17 @@ import { useFetch } from "../../hooks/useFetch";
 
 export const InfoCategory = () => {
   const { data, loading } = useFetch("http://localhost:3000/api/products");
+  const categoryCounts = data
+    ? data.data.reduce((acc, current) => {
+        const x = acc.find((item) => item.category === current.category);
+        if (!x) {
+          return acc.concat([{ category: current.category, count: 1 }]);
+        } else {
+          x.count += 1;
+          return acc;
+        }
+      }, [])
+    : null;
   return (
     <>
       <div className="flex flex-col items-center  border rounded-lg shadow bg-gray-700">
@@ -12,7 +23,7 @@ export const InfoCategory = () => {
           alt=""
         />
         <h1 className="text-3xl text-white font-serif ">Categorias</h1>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 p-5">
+        <div className="grid grid-cols sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 p-5">
           {data
             ? data.data
                 .reduce((acc, current) => {
@@ -34,6 +45,7 @@ export const InfoCategory = () => {
                     category={product.category}
                     img={product.img}
                     loading={loading}
+                    categoryCounts={categoryCounts}
                   />
                 ))
             : null}
