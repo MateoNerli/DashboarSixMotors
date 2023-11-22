@@ -9,7 +9,7 @@ export const StoreComponent = () => {
 
   return (
     <>
-      <div className="p-4 sm:ml-64  flex justify-center items-center">
+      <div className="p-4 sm:ml-64">
         {error && (
           <div className="flex justify-center items-center h-screen">
             <h1 className="text-4xl text-red-500">{error}</h1>
@@ -23,19 +23,21 @@ export const StoreComponent = () => {
             </div>
           </div>
         )}
-        <div className="p-4 mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {data
-            ? data.data.map((product) => (
-                <Products
-                  key={product.id}
-                  name={product.name}
-                  price={product.price}
-                  description={product.description}
-                  category={product.category}
-                  img={product.img}
-                />
-              ))
-            : null}
+        <div className="p-4 mt-14">
+          <div className="grid grid-cols-1 gap-4 mb-8 rounded-lg shadow-sm md:mb-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+            {data
+              ? data.data.map((product) => (
+                  <Products
+                    key={product.id}
+                    name={product.name}
+                    price={product.price}
+                    description={product.description}
+                    category={product.category}
+                    img={product.img}
+                  />
+                ))
+              : null}
+          </div>
         </div>
       </div>
     </>

@@ -3,6 +3,8 @@ import { useFetch } from "../../hooks/useFetch";
 
 export const InfoCategory = () => {
   const { data, loading } = useFetch("http://localhost:3000/api/products");
+  //  con reduce creo un nuevo array y guardo solo las categorias
+  // y cuento cuantas veces se repite cada categoria
   const categoryCounts = data
     ? data.data.reduce((acc, current) => {
         const x = acc.find((item) => item.category === current.category);
