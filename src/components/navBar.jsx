@@ -22,11 +22,7 @@ export const Navbar = ({ onToggleSidebar, isOpen }) => {
                 className="flex ms-2 md:me-24"
                 onClick={onToggleSidebar}
               >
-                <img
-                  src="/assets/img/log.png"
-                  className="h-10 me-3"
-                  alt="SixMotors"
-                />
+                <img src="/img/log.png" className="h-10 me-3" alt="SixMotors" />
 
                 <span className="self-center content-end text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
                   Six<span className="text-[#7c9285]">Motors</span>
