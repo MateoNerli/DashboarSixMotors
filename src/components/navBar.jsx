@@ -23,7 +23,7 @@ export const Navbar = ({ onToggleSidebar, isOpen }) => {
                 onClick={onToggleSidebar}
               >
                 <img
-                  src="../src/assets/img/log.png"
+                  src="/assets/img/log.png"
                   className="h-10 me-3"
                   alt="SixMotors"
                 />
