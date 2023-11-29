@@ -30,7 +30,7 @@ export const LastUser = () => {
         <div className="flex items-center pt-4 ">
           <div className="mr-4">
             <img
-              src={`http://localhost:3000/users/${latestUser.img}`}
+              src={`https://sixmotors.onrender.com/users/${latestUser.img}`}
               alt={`${latestUser.name} ${latestUser.lastname}`}
               className="w-14 h-14 object-cover rounded-full"
             />

@@ -29,7 +29,7 @@ export const LastProduct = () => {
         <div className="flex items-center p-4">
           <div className="mr-4">
             <img
-              src={`http://localhost:3000/uploads/${latestProduct.img}`}
+              src={`https://sixmotors.onrender.com/uploads/${latestProduct.img}`}
               alt={`${latestProduct.name}`}
               className="w-14 h-14 object-cover rounded-full"
             />
