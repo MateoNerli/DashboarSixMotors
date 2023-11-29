@@ -23,7 +23,7 @@ export const InfoCategory = () => {
       <div className="flex flex-col items-center  border rounded-lg shadow bg-gray-700">
         <img
           className="object-cover w-full h-64 md:h-full md:w-48 md:rounded-none md:rounded-l-lg"
-          src="../src/assets/logo.png"
+          src="../src/assets/img/logo.png"
           alt=""
         />
         <h1 className="text-3xl text-white font-serif ">Categorias</h1>
