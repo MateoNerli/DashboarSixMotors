@@ -4,7 +4,7 @@ import { UserMain } from "./userMain";
 
 export const InfoUser = () => {
   const { data, loading, error } = useFetch(
-    "http://localhost:3000/api/users?limit=5"
+    "https://sixmotors.onrender.com/api/users?limit=5"
   );
   return (
     <>

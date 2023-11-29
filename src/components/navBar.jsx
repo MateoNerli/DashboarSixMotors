@@ -18,7 +18,7 @@ export const Navbar = ({ onToggleSidebar, isOpen }) => {
                 />
               </button>
               <a
-                href="https://localhost/3000"
+                href="https://sixmotors.onrender.com"
                 className="flex ms-2 md:me-24"
                 onClick={onToggleSidebar}
               >

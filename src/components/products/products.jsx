@@ -5,7 +5,7 @@ export const Products = (props) => {
         <div className="duration-500 contrast-50 h-48 bg-gradient-to-bl from-black  hover:contrast-100">
           <img
             className="w-full h-full object-cover"
-            src={`http://localhost:3000/uploads/${props.img}`}
+            src={`https://sixmotors.onrender.com/uploads/${props.img}`}
             alt=""
           />
         </div>

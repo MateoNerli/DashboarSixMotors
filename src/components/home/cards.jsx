@@ -10,10 +10,11 @@ import { useFetch } from "../../hooks/useFetch";
 
 export const Cards = () => {
   const { data: data1, loading } = useFetch(
-    "http://localhost:3000/api/products"
+    // "http://localhost:3000/api/products"
+    "https://sixmotors.onrender.com/api/products"
   );
-  const { data: data2 } = useFetch("http://localhost:3000/api/users");
-  const { data: data3 } = useFetch("http://localhost:3000/api/orders");
+  const { data: data2 } = useFetch("https://sixmotors.onrender.com/api/users");
+  const { data: data3 } = useFetch("https://sixmotors.onrender.com/api/orders");
 
   return (
     <>

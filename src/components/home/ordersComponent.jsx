@@ -3,7 +3,7 @@ import { useFetch } from "../../hooks/useFetch";
 
 export const OrderComponent = () => {
   const { data, loading } = useFetch(
-    "http://localhost:3000/api/orders?limit=6"
+    "https://sixmotors.onrender.com/api/orders?limit=6"
   );
   return (
     <div className="bg-[#d3dad6] p-8 rounded-xl shadow-2xl mb-8">

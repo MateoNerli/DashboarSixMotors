@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 export const UserComponent = () => {
-  const { data, loading, error } = useFetch("http://localhost:3000/api/users");
+  const { data, loading, error } = useFetch(
+    "https://sixmotors.onrender.com/api/users"
+  );
   const [currentPage, setCurrentPage] = useState(1);
   const [usersPerPage] = useState(10);
 

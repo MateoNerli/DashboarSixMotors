@@ -1,7 +1,9 @@
 import { useFetch } from "../../hooks/useFetch";
 
 export const LastUser = () => {
-  const { data, loading } = useFetch("http://localhost:3000/api/users");
+  const { data, loading } = useFetch(
+    "https://sixmotors.onrender.com/api/users"
+  );
 
   // aca ordeno por fecha de creacion y tomo el ultimo
   const latestUser = data

@@ -2,7 +2,9 @@ import { CardCategory } from "./cardCategory";
 import { useFetch } from "../../hooks/useFetch";
 
 export const InfoCategory = () => {
-  const { data, loading } = useFetch("http://localhost:3000/api/products");
+  const { data, loading } = useFetch(
+    "https://sixmotors.onrender.com/api/products"
+  );
   //  con reduce creo un nuevo array y guardo solo las categorias
   // y cuento cuantas veces se repite cada categoria
   const categoryCounts = data

@@ -4,7 +4,7 @@ export const UserMain = (props) => {
       <div className="grid grid-cols-1 xl:grid-cols-4 items-center gap-4 mb-4">
         <div className="col-span-2 flex items-center gap-4">
           <img
-            src={`http://localhost:3000/users/${props.img}`}
+            src={`https://sixmotors.onrender.com/users/${props.img}`}
             className="w-14 h-14 object-cover rounded-xl"
           />
           <div>

@@ -1,7 +1,9 @@
 import { useFetch } from "../../hooks/useFetch";
 
 export const LastProduct = () => {
-  const { data, loading } = useFetch("http://localhost:3000/api/products");
+  const { data, loading } = useFetch(
+    "https://sixmotors.onrender.com/api/products"
+  );
 
   const latestProduct = data
     ? [...data.data].sort(

@@ -2,7 +2,9 @@ import { useFetch } from "../../hooks/useFetch";
 import { InfoTotal } from "./infoTotal";
 
 export const CatdTotal = () => {
-  const { data, loading, error } = useFetch("http://localhost:3000/api/orders");
+  const { data, loading, error } = useFetch(
+    "https://sixmotors.onrender.com/api/orders"
+  );
 
   const totalSum = data
     ? data.data.reduce((acc, order) => acc + parseFloat(order.total), 0)

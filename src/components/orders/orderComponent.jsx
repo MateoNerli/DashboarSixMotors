@@ -2,7 +2,9 @@ import { useFetch } from "../../hooks/useFetch";
 import { Order } from "./order";
 
 export const OrderComponent = () => {
-  const { data, loading, error } = useFetch("http://localhost:3000/api/orders");
+  const { data, loading, error } = useFetch(
+    "https://sixmotors.onrender.com/api/orders"
+  );
 
   return (
     <div className="p-4 sm:ml-64">

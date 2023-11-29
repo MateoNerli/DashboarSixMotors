@@ -6,7 +6,7 @@ import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 export const StoreComponent = () => {
   const { data, loading, error } = useFetch(
-    "http://localhost:3000/api/products"
+    "https://sixmotors.onrender.com/api/products"
   );
 
   const [currentPage, setCurrentPage] = useState(1);
